@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+	<!--
+		This is the Struts configuration file for the Login example
+		application
+	-->
+
+
+<struts-config>
+	<!--
+		========== Form Bean Definitions ===================================
+	-->
+	<form-beans>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/hello" type="javaActionForms.HellowWorldActionForm"
+			name="hello" scope="request" parameter="method" validate="false">
+			<forward name="failure" path="/jsp/HellowWorld.jsp" />
+			<forward name="success" path="/jsp/Test.jsp" />
+		</action>
+		
+		
+		<action path="/airportDetails" type="javaActionForms.airportDetailsActionForm"
+			name="airportDetails" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/airportDetails.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="listIdSuccess" path="/jsp/airportDetails.jsp" />
+			<forward name="editSuccess" path="/jsp/airportDetails.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/airportDetails.jsp" />
+		</action>
+		
+		
+		<action path="/tripType" type="javaActionForms.tripTypeActionForm"
+			name="tripType" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/tripType.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="listIdSuccess" path="/jsp/tripType.jsp" />
+			<forward name="editSuccess" path="/jsp/tripType.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/tripType.jsp" />
+		</action>
+		
+		
+		<action path="/flightDetails" type="javaActionForms.flightDetailsActionForm"
+			name="flightDetails" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/flightDetails.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="listIdSuccess" path="/jsp/flightDetails.jsp" />
+			<forward name="editSuccess" path="/jsp/flightDetails.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/flightDetails.jsp" />
+		</action>
+
+		<action path="/route" type="javaActionForms.routeActionForm"
+			name="route" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/route.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="listIdSuccess" path="/jsp/route.jsp" />
+			<forward name="editSuccess" path="/jsp/route.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/route.jsp" />
+		</action>
+		
+		<action path="/userProfiles" type="javaActionForms.userProfilesActionForm"
+			name="userProfiles" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/userId.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="listIdSuccess" path="/jsp/userProfilesEdit.jsp" />
+			<forward name="editSuccess" path="/jsp/Home.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/userProfiles.jsp" />
+		</action>
+		
+		<action path="/flightSchedule" type="javaActionForms.flightScheduleActionForm"
+			name="flightSchedule" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/flightSchedule.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="listIdSuccess" path="/jsp/flightSchedule.jsp" />
+			<forward name="editSuccess" path="/jsp/flightSchedule.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/flightSchedule.jsp" />
+		</action>
+		
+		<action path="/setTimings" type="javaActionForms.setTimingsActionForm"
+			name="setTimings" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/setTimings.jsp" />
+			<forward name="listSuccess" path="/jsp/list.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/setTimings.jsp" />
+		</action>
+		
+		
+		<action path="/searchFlights" type="javaActionForms.searchFlightsActionForm"
+			name="searchFlights" scope="request" parameter="method" validate="false">
+			<forward name="searchSuccess" path="/jsp/bookFlightDetails.jsp" />
+			<forward name="searchFailure" path="/jsp/searchFlights.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/searchFlights.jsp" />
+		</action>
+		
+		<action path="/bookConfirmation" type="javaActionForms.bookConfirmationActionForm"
+			name="bookConfirmation" scope="request" parameter="method" validate="false">
+			<forward name="bookSuccess" path="/jsp/customerDetails.jsp" />
+		</action>
+		
+		<action path="/customerDetails" type="javaActionForms.customerDetailsActionForm"
+			name="customerDetails" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/ticketConfirmation.jsp" />
+		</action>
+		
+		<action path="/checkTicket" type="javaActionForms.checkTicketActionForm"
+			name="checkTicket" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/ticket.jsp" />
+		</action>
+		
+		<action path="/cancelTicket" type="javaActionForms.cancelTicketActionForm"
+			name="cancelTicket" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/searchReport.jsp" />
+		</action>
+		
+		
+		<action path="/searchTicket" type="javaActionForms.searchTicketActionForm"
+			name="searchTicket" scope="request" parameter="method" validate="false">
+			<forward name="searchSuccess" path="/jsp/searchReport.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/searchReport.jsp" />
+		</action>
+		
+		<action path="/dailyReport" type="javaActionForms.dailyReportActionForm"
+			name="dailyReport" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/dailyReport.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/dailyReport.jsp" />
+		</action>
+		
+		<action path="/yearlyReport" type="javaActionForms.yearlyReportActionForm"
+			name="yearlyReport" scope="request" parameter="method" validate="false">
+			<forward name="addSuccess" path="/jsp/yearlyReport.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/yearlyReport.jsp" />
+		</action>
+		
+		<action path="/changePassword" type="javaActionForms.changePasswordActionForm"
+			name="changePassword" scope="request" parameter="method" validate="false">
+			<forward name="editSuccess" path="/jsp/changeUserPassword.jsp" />
+			<forward name="emptyactionSuccess" path="/jsp/changeUserPassword.jsp" />
+		</action>
+		
+		
+		<action path="/logout" type="javaActionForms.logoutActionForm"
+			name="logout" scope="request" parameter="method" validate="false">
+			<forward name="logoutSuccess" path="/jsp/Index.jsp" />
+		</action>
+		
+		<action path="/login" type="javaActionForms.loginActionForm"
+			name="login" scope="request" parameter="method" validate="false">
+			<forward name="authenticateSuccess" path="/jsp/Home.jsp" />
+			<forward name="authenticateFailure" path="/jsp/Index.jsp" />
+		</action>
+		
+		<action path="/userHistory" type="javaActionForms.userHistoryActionForm"
+			name="userHistory" scope="request" parameter="method" validate="false">
+			<forward name="loadSuccess" path="/jsp/userHistory.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<!--
+		========== Message Resources Definitions ===========================
+	-->
+	<message-resources parameter="ApplicationResources" />
+
+
+</struts-config>
